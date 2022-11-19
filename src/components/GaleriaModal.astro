@@ -1,0 +1,87 @@
+---
+export interface GaleriaModalConfig {
+    titulo: string;
+    id: string;
+}
+
+export interface Props {
+    config: GaleriaModalConfig;
+}
+
+const { config } = Astro.props;
+---
+
+<div
+    class="modal fade"
+    id={`galeria-modal-${config.id}`}
+    tabindex="-1"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content galeria-background">
+            <div class="modal-header galeria-color">
+                <h5 class="modal-title" id="exampleModalToggleLabel">
+                    {config.titulo}
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body galeria-background">
+                <div class="carousel slide h-100" data-interval="false">
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active h-100">
+                            <div
+                                class="d-flex justify-content-center align-items-center h-100"
+                            >
+                                <img id={`galeria-modal-visor-${config.id}`}
+                                    src="..."
+                                    class="d-block h-100"
+                                    alt="..."
+                                />
+                            </div>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5 id={`galeria-modal-visor-titulo-${config.id}`}>--TITULO--</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        id = {`galeria-modal-anterior-${config.id}`}
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev"
+                    >
+                        <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                        id = {`galeria-modal-siguiente-${config.id}`}
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next"
+                    >
+                        <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .galeria-background{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .galeria-color{
+        background-color: white;
+    }
+</style>

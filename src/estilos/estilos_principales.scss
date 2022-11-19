@@ -1,0 +1,121 @@
+$spacer: 1rem;
+$accordion-padding-y:                     1rem;
+$accordion-padding-x:                     1.25rem;
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Parisienne&family=Roboto+Condensed&family=Water+Brush&display=swap');
+//npm run uild
+//npm run servidor(nombre)
+
+.nav-link{
+    color: white;
+    
+}
+
+.dropdown-item{
+    color: white;
+}
+/*&:hover{
+    animation-name: example;
+}*/
+
+
+.pestañas{
+    margin: 150px;
+
+}
+.centered1{
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size:90.4781pt;
+}
+.sub1{
+    font-family: 'Montserrat', sans-serif;
+    font-size:36pt;
+    color: #D3CECC;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+.barra{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container-fluid{
+    margin: 0;
+    padding: 0;
+    
+}
+.IMGT1{
+    width: 100%;
+}
+.section3{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size:30pt;
+
+    padding: 20rem;
+    
+    background-color: aquamarine;
+}
+
+body{
+    overflow-x: 0;
+}
+
+.galeria1{
+    margin-top: 5rem;
+
+}
+
+.m{
+margin: 0;
+}
+
+.barraModal{
+    height: 100px;
+}
+
+.containerGaleria{
+    background-color: rgb(0, 0, 0);
+    margin-top: 2%;
+    margin-left: 18%;
+    margin-right: 18%;
+    height: 72%;
+}
+.containerGaleria1{
+    //background-color: rgb(0, 0, 0);
+    margin-top: 2%;
+    margin-left: 18%;
+    margin-right: 18%;
+    height: 72%;
+}
+.CoseBTGaleria{
+    margin-right: 1%;
+}
+.TituloGaleria{
+    color: white;
+}
+
+.Seccion2{
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    
+}
+.margen{
+    
+    font-size: 14pt;
+}
+.alineacion{
+    font-size: 14pt;
+    text-align: center; /* For Edge */
+    
+}
+

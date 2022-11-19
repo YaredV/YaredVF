@@ -1,0 +1,494 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CaruselPortada from '../components/Carusel-portada.astro';
+import "../estilos/estilos_principales.scss";
+
+import Galeria, {GaleriaConfig} from "../components/Galeria.astro";
+import GaleriaModal, {GaleriaModalConfig} from "../components/GaleriaModal.astro";
+---
+
+	
+<body>
+	<Layout title="YARED VF.">
+		<main>
+			
+			<!--SECCION UNO // PORTADA -->
+			<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+				
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+					<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+				  </div>
+
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<CaruselPortada
+						fuente="/portada/01.jpg"
+						imgDescrip="pintura de plantas"
+					/>
+					<div class="centered1 display-1">
+						YARED VF
+					</div>
+					<div class="sub1">
+						FOTOGRAFIA
+						<img class="barra1" src="/elementos/barra1.png" alt="Logo">
+						
+					</div>
+					
+				  </div>
+				 
+				  <div class="carousel-item">
+
+					<CaruselPortada
+						fuente="/portada/02.jpg"
+						imgDescrip="pintura de plantas"	
+					/>
+					<div class="centered1 display-1">
+						YARED VF
+					</div>
+					<div class="sub1">
+						FOTOGRAFIA
+						<img class="barra1" src="/elementos/barra1.png" alt="Logo">
+						
+					</div>
+
+				  </div>
+				  <div class="carousel-item">
+
+					<CaruselPortada
+						fuente="/portada/03.jpg"
+						imgDescrip="pintura de plantas"
+					/>
+					<div class="centered1 display-1">
+						YARED VF
+						
+					</div>
+					<div class="sub1">
+						FOTOGRAFIA
+						<img class="barra1" src="/elementos/barra1.png" alt="Logo">
+						
+					</div>
+				  </div>
+				  <div></div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+
+			<!--SOBRE MI -->
+			<section>
+				<div class="container-fluid">
+					<div class="grid bg1">
+						<div class="row row-cols-2">
+						  <div class="g-col-6 SMT">
+							<img class="IMGT1" src="/sobreMi/retratoYo.jpg" alt="...">
+						</div>
+						  <div class="g-col-6 margen">
+							<h2 class="Seccion2">SOBRE MI</h2>
+							<p class="alineacion">Yared Villegas (Mexico, 1999), Estufiante de Artes Digitales, fotografa que se enfoca en retratos creativos y organicos que exploran la mente y,
+								deseos de cada persona, asi como tambien los suyos y donde su cultura tambien fomra parte de ello.
+								
+								Sus retratos han llegado a la universidad nacional de Karkiv, Ucrania, para una exposicion de trabajos estudiantiles llamada "HABITACULUM".
+							</p>
+						</div>
+						 
+						</div>
+					  </div>
+
+				</div>
+			</section>
+
+			<!--Portafolio -->
+			<section>
+				<div class="container-fluid section3">
+					<div>
+						<h2 class="Section3">PORTAFOLIO</h2>
+
+						<div class="container galeria1">
+							<div class="row">
+								<!--Primera fila -->
+
+
+								<!--DIEMORTIS -->
+								<div class="col-md-4 g-col-md-4">
+									
+									<!-- Button trigger modal -->
+									<a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+										<img class="" style="width: 100%;"  src="/portafolio/dieMortis.jpg" alt="">									
+									</a>
+									
+									<!-- Modal -->
+									<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keybpard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+										<div class="modal-dialog m">
+										</div>
+										<div class="">
+											<div class="modal-header barraModal">
+											  <h5 class="modal-title" id="staticBackdropLabel"></h5>
+											  <a type="button" class="CoseBTGaleria" data-bs-dismiss="modal" aria-label="Close">
+												<img class="" src="/elementos/close.png" alt="">
+											  </a>
+											</div>	
+										</div>		
+
+										<!--GALERIA1 -->
+										<div class="containerGaleria">
+											<div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+												<div class="carousel-inner">
+												  <div class="carousel-item active">
+													<img src="/Galeria1/A00.jpg" class="d-block w-100" alt="...">
+													
+												  </div>
+												  <div class="carousel-item">
+													<img src="/Galeria1/A01.jpg" class="d-block w-100" alt="...">
+												  </div>
+												  <div class="carousel-item">
+													<img src="/Galeria1/A02.jpg" class="d-block w-100" alt="...">
+												  </div>
+												  <div class="carousel-item">
+													<img src="/Galeria1/A03.jpg" class="d-block w-100" alt="...">
+												  </div>
+												  <div class="carousel-item">
+													<img src="/Galeria1/A04.jpg" class="d-block w-100" alt="...">
+												  </div>
+												  <div class="carousel-item">
+													<img src="/Galeria1/A05.jpg" class="d-block w-100" alt="...">
+												  </div>
+												</div>
+												
+												<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+												  <span class="" aria-hidden="true">
+													<img src="/elementos/Atras.png" class="d-block w-100" alt="atras">
+												  </span>
+												  
+												  <span class="visually-hidden">Previous</span>
+												</button>
+												<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+												  <span class="" aria-hidden="true">
+														<img src="/elementos/siguiente.png" class="d-block w-100" alt="siguiente">
+												  </span>
+												  <span class="visually-hidden">Next</span>
+												</button>
+
+										 	</div>
+
+										</div>
+									</div>
+									
+								</div>
+								
+									
+								<!--SMERALDO -->
+								<div class="col-md-4 g-col-md-4">
+									
+									<!-- Button trigger modal -->
+									<a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+										<img class="" style="width: 100%;"  src="/portafolio/smeraldo.jpg" alt="">									
+									</a>
+									
+										
+								
+	
+									<!-- Modal -->
+									<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keybpard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+										<div class="modal-dialog m">
+										</div>
+										<div class="">
+											<div class="modal-header barraModal">
+											  <h5 class="modal-title" id="staticBackdropLabel1"></h5>
+											  <a type="button" class="CoseBTGaleria" data-bs-dismiss="modal" aria-label="Close">
+												<img class="" src="/elementos/close.png" alt="">
+											  </a>
+											</div>	
+										</div>		
+											
+										<!--GALERIA 2 -->
+										<div class="containerGaleria1">
+											<div id="carouselExampleControlsNoTouching1" class="carousel slide" data-bs-touch="false">
+												<div class="carousel-inner">
+
+												  <div class="carousel-item active">
+														<img src="/Galeria2/B00.png" class="d-block w-100" alt="...">
+												 	</div>
+												  <div class="carousel-item">
+													<img src="/Galeria2/B01.png" class="d-block w-100" alt="...">
+												  </div>
+												  <div class="carousel-item">
+													<img src="/Galeria2/B02.png" class="d-block w-100" alt="...">
+												  </div>
+												  <div class="carousel-item">
+													<img src="/Galeria2/B03.png" class="d-block w-100" alt="...">
+												  </div>
+												  <div class="carousel-item">
+													<img src="/Galeria2/B04.png" class="d-block w-100" alt="...">
+												  </div>
+												 
+												</div>
+													
+												<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching1" data-bs-slide="prev">
+													<span class="" aria-hidden="true">
+														<img src="/elementos/AtrasB.png" class="d-block w-100" alt="atras">
+													</span>
+													
+													<span class="visually-hidden">Previous</span>
+												</button>
+												<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching1" data-bs-slide="next">
+													<span class="" aria-hidden="true">
+															<img src="/elementos/Next.png" class="d-block w-100" alt="siguiente">
+													</span>
+													<span class="visually-hidden">Next</span>
+												</button>
+
+											</div>
+										</div>
+										
+									</div>
+								</div>
+
+								<!-- BODEGON-->
+								<div class="col-md-4 g-col-md-4">
+									
+									<!-- Button trigger modal -->
+									<a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+										<img class="" style="width: 100%;"  src="/portafolio/bodegon.jpg" alt="">									
+									</a>
+									
+									<!-- Modal -->
+									<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keybpard="false" tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
+										<div class="modal-dialog m">
+										</div>
+										<div class="">
+											<div class="modal-header barraModal">
+											  <h5 class="modal-title" id="staticBackdropLabel2"></h5>
+											  <a type="button" class="CoseBTGaleria" data-bs-dismiss="modal" aria-label="Close">
+												<img class="" src="/elementos/close.png" alt="">
+											  </a>
+											</div>	
+										</div>		
+											
+										<!--GALERIA 3 -->
+										<div class="containerGaleria1">
+											<div id="carouselExampleControlsNoTouching2" class="carousel slide" data-bs-touch="false">
+												<div class="carousel-inner">
+
+												  <div class="carousel-item active">
+													<img src="/Galeria3/C00.png" class="d-block w-100" alt="...">
+												  </div>
+
+												</div>	
+												
+											</div>
+										</div>
+										
+									</div>
+								
+								</div>
+
+
+
+								<!--Segunda fila -->
+							 
+								<!--SHADOW -->
+							  <div class="w-100 d-none d-md-block mt-10"></div>
+						  
+							  <div class="col-md-4 g-col-md-4">
+								<!-- Button trigger modal -->
+								<a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">
+									<img class="" style="width: 100%;"  src="/portafolio/shadow.jpg" alt="">									
+								</a>
+								
+								<!-- Modal -->
+								<div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keybpard="false" tabindex="-1" aria-labelledby="staticBackdropLabel3" aria-hidden="true">
+									<div class="modal-dialog m">
+									</div>
+									<div class="">
+										<div class="modal-header barraModal">
+										  <h5 class="modal-title" id="staticBackdropLabel3"></h5>
+										  <a type="button" class="CoseBTGaleria" data-bs-dismiss="modal" aria-label="Close">
+											<img class="" src="/elementos/close.png" alt="">
+										  </a>
+										</div>	
+									</div>		
+									
+									<!--GALERIA 4 -->
+									<div class="containerGaleria">
+										<div id="carouselExampleControlsNoTouching3" class="carousel slide" data-bs-touch="false">
+											<div class="carousel-inner">
+
+											  <div class="carousel-item active">
+												<img src="/Galeria4/D00.png" class="d-block w-100" alt="...">
+											  </div>
+											  <div class="carousel-item">
+												<img src="/Galeria4/D01.png" class="d-block w-100" alt="...">
+											  </div>
+											  <div class="carousel-item">
+												<img src="/Galeria4/D02.png" class="d-block w-100" alt="...">
+											  </div>
+											  <div class="carousel-item">
+												<img src="/Galeria4/D03.png" class="d-block w-100" alt="...">
+											  </div>
+											  
+											 
+											</div>
+												
+											<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching3" data-bs-slide="prev">
+												<span class="" aria-hidden="true">
+													<img src="/elementos/Atras.png" class="d-block w-100" alt="atras">
+												</span>
+												
+												<span class="visually-hidden">Previous</span>
+											</button>
+											<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching3" data-bs-slide="next">
+												<span class="" aria-hidden="true">
+														<img src="/elementos/siguiente.png" class="d-block w-100" alt="siguiente">
+												</span>
+												<span class="visually-hidden">Next</span>
+											</button>
+
+										</div>
+									</div>
+									
+								</div>
+							</div>
+
+							<!--EXTRADULCE -->
+						  <div class="col-md-4 g-col-md-4">
+								<!-- Button trigger modal -->
+								<a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">
+									<img class="" style="width: 100%;"  src="/portafolio/extraDulce.jpg" alt="">									
+								</a>
+								
+								<!-- Modal -->
+								<div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keybpard="false" tabindex="-1" aria-labelledby="staticBackdropLabel4" aria-hidden="true">
+									<div class="modal-dialog m">
+									</div>
+									<div class="">
+										<div class="modal-header barraModal">
+											<h5 class="modal-title" id="staticBackdropLabel4"></h5>
+											<a type="button" class="CoseBTGaleria" data-bs-dismiss="modal" aria-label="Close">
+												<img class="" src="/elementos/close.png" alt="">
+											</a>
+										</div>	
+									</div>		
+										
+									<!--GALERIA 5 -->
+									<div class="containerGaleria1">
+										<div id="carouselExampleControlsNoTouching4" class="carousel slide" data-bs-touch="false">
+											<div class="carousel-inner">
+
+												<div class="carousel-item active">
+														<img src="/Galeria5/G00.png" class="d-block w-100" alt="...">
+												</div>
+											
+											</div>
+											
+											<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching4" data-bs-slide="prev">
+												<span class="" aria-hidden="true">
+													<img src="/elementos/AtrasB.png" class="d-block w-100" alt="atras">
+												</span>
+												
+												<span class="visually-hidden">Previous</span>
+											</button>
+											<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching4" data-bs-slide="next">
+												<span class="" aria-hidden="true">
+														<img src="/elementos/Next.png" class="d-block w-100" alt="siguiente">
+												</span>
+												<span class="visually-hidden">Next</span>
+											</button>
+
+										</div>
+									</div>
+								
+								</div>
+						  	</div>
+
+							<!--GALERIA6 -->
+						  <div class="col-md-4 g-col-md-4">
+							
+								<!-- Button trigger modal -->
+								<a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">
+									<img class="" style="width: 100%;"  src="/portafolio/light.jpg" alt="">									
+								</a>
+							
+								<!-- Modal -->
+								<div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keybpard="false" tabindex="-1" aria-labelledby="staticBackdropLabel5" aria-hidden="true">
+									<div class="modal-dialog m">
+									</div>
+									<div class="">
+										<div class="modal-header barraModal">
+										<h5 class="modal-title" id="staticBackdropLabel5"></h5>
+										<a type="button" class="CoseBTGaleria" data-bs-dismiss="modal" aria-label="Close">
+											<img class="" src="/elementos/close.png" alt="">
+										</a>
+									</div>	
+									</div>		
+							
+									<!--GALERIA 6 -->
+									<div class="containerGaleria">
+										<div id="carouselExampleControlsNoTouching5" class="carousel slide" data-bs-touch="false">
+											<div class="carousel-inner">
+
+												<div class="carousel-item active">
+													<img src="/Galeria6/C00.jpg" class="d-block w-100" alt="...">
+												</div>
+												<div class="carousel-item">
+													<img src="/Galeria6/C01.jpg" class="d-block w-100" alt="...">
+												</div>
+												
+												<div class="carousel-item">
+													<img src="/Galeria6/C03.jpg" class="d-block w-100" alt="...">
+												</div>
+												<div class="carousel-item">
+													<img src="/Galeria6/C05.jpg" class="d-block w-100" alt="...">
+												</div>
+													
+												<div class="carousel-item">
+													<img src="/Galeria6/C09.jpg" class="d-block w-100" alt="...">
+												</div>
+												
+											
+											</div>
+												
+											<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching5" data-bs-slide="prev">
+												<span class="" aria-hidden="true">
+													<img src="/elementos/AtrasB.png" class="d-block w-100" alt="atras">
+												</span>
+												
+												<span class="visually-hidden">Previous</span>
+											</button>
+											<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching5" data-bs-slide="next">
+												<span class="" aria-hidden="true">
+														<img src="/elementos/Next.png" class="d-block w-100" alt="siguiente">
+												</span>
+												<span class="visually-hidden">Next</span>
+											</button>
+
+										</div>
+									</div>
+									
+								</div>
+							</div>
+
+						</div>
+					</div>
+									
+				</div>
+
+			</div>
+			</section>
+
+
+		</main>
+
+	</Layout>
+	
+	
+	 
+</body>
+

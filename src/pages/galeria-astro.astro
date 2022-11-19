@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Galeria, {GaleriaConfig} from "../components/Galeria.astro";
+import GaleriaModal, {GaleriaModalConfig} from "../components/GaleriaModal.astro";
+
+const configGaleriaPrincipal: GaleriaConfig = {
+    id: "GaleriaFotos",
+    columnas: [
+        {
+            imagenes: [
+                {
+                    titulo: "imagen1",
+                    alt: "imagen1",
+                    src: "dog.jpg",
+                },
+                {
+                    titulo: "imagen4",
+                    alt: "imagen4",
+                    src: "pareja.jpg"
+                },
+            ],
+            
+        },
+        {
+            imagenes: [
+                {
+                    titulo: "imagen2",
+                    alt: "imagen2",
+                    src: "microfono.jpg",
+                },
+                {
+                    titulo: "imagen5",
+                    alt: "imagen5",
+                    src: "/img/img1.jpg"
+                },
+            ],
+            
+        },
+
+    ],
+};
+const configGaleriaModalPrincipal: GaleriaModalConfig = {
+    id: configGaleriaPrincipal.id, titulo: "Galeria Foto"
+};
+const configGaleriaSecundaria: GaleriaConfig = {
+    id: "GaleriaFotos",
+    columnas: [
+        {
+            imagenes: [
+                {
+                    titulo: "imagen1",
+                    alt: "imagen1",
+                    src: "dog.jpg",
+                },
+                {
+                    titulo: "imagen4",
+                    alt: "imagen4",
+                    src: "pareja.jpg"
+                },
+            ],
+            
+        },
+        {
+            imagenes: [
+                {
+                    titulo: "imagen2",
+                    alt: "imagen2",
+                    src: "microfono.jpg",
+                },
+                {
+                    titulo: "imagen5",
+                    alt: "imagen5",
+                    src: "/img/img1.jpg"
+                },
+            ],
+            
+        },
+
+    ],
+};
+const configGaleriaModalSecundaria: GaleriaModalConfig = {
+    id: configGaleriaPrincipal.id, titulo: "Galeria Foto"
+};
+
+---
+
+<Layout title="Programacion en Astro">
+    <main>
+        <h1 class="pt-5">PRINCIPAL</h1>
+        <Galeria config={configGaleriaPrincipal}/>
+
+        <h1>SECUNDARIO</h1>
+        <Galeria config={configGaleriaSecundaria}/>
+        <GaleriaModal config={configGaleriaModalPrincipal}/>
+        <GaleriaModal config={configGaleriaModalSecundaria}/>
+    </main>
+</Layout>

@@ -1,0 +1,68 @@
+---
+export interface GaleriaImagen {
+    src: string;
+    titulo: string;    
+    alt: string;
+}
+export interface GaleriaColumna {
+    imagenes: GaleriaImagen[];
+}
+export interface GaleriaConfig {
+    columnas: GaleriaColumna[];
+    id: string;
+}
+export interface Props {
+    config: GaleriaConfig;
+}
+
+const { config } = Astro.props;
+---
+
+<div class="galeria-componente" data-config={JSON.stringify(config)}>
+    <div class="container-fluid">
+        <div class="row">
+            {
+                config.columnas.map((columna, ncolumna) => {
+                    return (
+                        <div
+                            class={`col-lg-${parseInt(
+                                (12 / config.columnas.length).toString()
+                            )} col-md-${parseInt(
+                                (12 / config.columnas.length).toString()
+                            )} col-sm-6 col-xs-6`}
+                        >
+                            {columna.imagenes.map((imagen, nfila) => {
+                                return (
+                                    <button class={`galeria-imagen galeria-${config.id}`} data-current={JSON.stringify({columna: ncolumna, fila: nfila})}>
+                                        <img
+                                            src={imagen.src}
+                                            alt={imagen.alt}
+                                            title={imagen.titulo}
+                                            class="img-fluid"
+                                        />                                        
+                                    </button>
+                                );
+                            })}
+                        </div>
+                    );
+                })
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    .row {
+        padding: 0 0 8px 0;
+    }
+    .row > div {
+        padding: 0 4px !important;
+    }
+
+    .galeria-imagen {
+        border: 0px;
+        margin-top: 8px;
+        vertical-align: middle;
+    }
+
+</style>

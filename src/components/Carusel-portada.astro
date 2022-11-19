@@ -1,0 +1,12 @@
+---
+
+export interface Props{
+	
+	fuente: string;
+	imgDescrip: string;
+}
+import "../estilos/estilos_principales.scss";
+const { fuente, imgDescrip, titulo, cuerpo } = Astro.props;
+---
+
+<img src={fuente} class="d-block w-100" alt={imgDescrip}>

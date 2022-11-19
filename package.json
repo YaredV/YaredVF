@@ -9,10 +9,11 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "servidor" : "serve -p 4000 ./dist" 
+    "servidor": "serve -p 4000 ./dist"
   },
   "dependencies": {
     "astro": "^1.4.2",
-    "bootstrap": "^5.2.1"
+    "bootstrap": "^5.2.1",
+    "sass": "^1.55.0"
   }
 }
