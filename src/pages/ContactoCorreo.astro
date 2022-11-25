@@ -1,0 +1,133 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../estilos/estilos_principales.scss";
+
+---
+
+<Layout title="Contacto">
+	<main>
+		
+		<!-- SECCIÓN DE FORMULARIO DE CONTACTO  -->
+		<section class="container py-5">
+			<div class="row">
+				<div class="col-lg-6">
+					
+					<form action="/data" id="Formulario" method="get">
+						<div class="my-3">
+							<label for="Nombre">Nombre:</label>
+							<input
+								type="text"
+								name="nombre"
+								class="form-control"
+								id="Nombre"
+								placeholder="Ingresa tu nombre" 
+								required
+							/>
+						</div>
+						<div class="my-3">
+							<label for="Correo">Correo:</label>
+							<input
+								type="email"
+								name="correo"
+								class="form-control"
+								id="Correo"
+								placeholder="Enter email"
+								required
+							/>
+						</div>
+						<div class="mb-3">
+							<label for="Tel">Telefono:</label>
+							<input
+								type="tel"
+								name="telefono"
+								class="form-control"
+								id="Tel"
+								placeholder="Telefono (no es un campo obligatorio)"
+							/>
+						</div>
+
+						<div class="mb-3">
+							<label for="Mensaje">Mensaje:</label>
+							<textarea
+								name="mensaje"
+								class="form-control"
+								placeholder="Mensaje"
+								id="Mensaje"
+								required></textarea>
+						</div>
+
+						<button type="submit" class="boton boton1" name="enviar">
+							Enviar
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<!-- MODAL DE CONFIRMACIÓN -->
+		<div
+			class="modal fade"
+			id="modalFunciona"
+			tabindex="-1"
+			aria-labelledby="exampleModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							Enviado correctamente
+						</h5>
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">A continuación se abrirá su aplicación de correo para envíar la información</div>
+					<div class="modal-footer">
+						<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal">Entendido</button
+						>						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</main> <!-- Termina contenido visible  -->
+
+	<!-- CÓDIGO EN JAVASCRIPT PARA ENVIAR EL EVENTO GET  -->
+	<script is:inline>
+		window.addEventListener("DOMContentLoaded", (event) => {
+			const formulario = document.getElementById("Formulario");
+			formulario.addEventListener("submit", (event) => {
+				event.preventDefault();
+
+				const formData = new FormData(formulario);
+				var data = {};
+				for (var pair of formData.entries()) {
+					data = {...data, [pair[0]] : pair[1]}    				
+  				}			
+
+				const referencia =
+					"mailto:micorreo@hotmail.com?subject=Quiero%20contactar%20con%20el%20artista&body=Nombre:%20" +
+					data.nombre +
+					"%0D%0ACorreo:%20" +
+					data.correo +
+					"%0D%0ATelefono:%20" +
+					data.tel +
+					"%0D%0AMensaje:%20" +
+					data.mensaje;
+
+				const enlace = document.createElement("a");
+				enlace.href = referencia;
+				enlace.click();
+
+				const modalConfirmacion = new bootstrap.Modal(document.getElementById("modalFunciona"), {});				
+				modalConfirmacion.show();
+			});
+		});
+	</script>
+</Layout>

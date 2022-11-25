@@ -1,6 +1,21 @@
 $spacer: 1rem;
 $accordion-padding-y:                     1rem;
 $accordion-padding-x:                     1.25rem;
+
+$color1: #A66851;
+$color2: #BF988A;
+$color3: #D9D4D2;
+$color4: #734338;
+$color5: #A63B32;
+
+$color6: #82FF64;
+
+
+//$modal-backdrop-bg:                 $black;
+$modal-backdrop-opacity:  0.8;
+
+
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Parisienne&family=Roboto+Condensed&family=Water+Brush&display=swap');
 //npm run uild
@@ -9,6 +24,9 @@ $accordion-padding-x:                     1.25rem;
 .nav-link{
     color: white;
     
+}
+.estiloslogo{
+    margin-left: 5%;
 }
 
 .dropdown-item{
@@ -54,6 +72,7 @@ $accordion-padding-x:                     1.25rem;
 }
 .IMGT1{
     width: 100%;
+    height: auto;
 }
 .section3{
     text-align: center;
@@ -62,7 +81,7 @@ $accordion-padding-x:                     1.25rem;
 
     padding: 20rem;
     
-    background-color: aquamarine;
+    background-color: white;
 }
 
 body{
@@ -83,6 +102,7 @@ margin: 0;
 }
 
 .containerGaleria{
+   
     background-color: rgb(0, 0, 0);
     margin-top: 2%;
     margin-left: 18%;
@@ -92,6 +112,7 @@ margin: 0;
 
 .containerGaleria1{
     //background-color: rgb(0, 0, 0);
+    background: $modal-backdrop-opacity;
     margin-top: 2%;
     margin-left: 18%;
     margin-right: 18%;
@@ -102,21 +123,73 @@ margin: 0;
 }
 .TituloGaleria{
     color: white;
+    
 }
 
 .Seccion2{
     text-align: center;
-    margin-top: 20%;
-    margin-bottom: 10%;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15%;
+    
+}
+.botonCV{
+    margin-top: 10%;
+    background-color: $color1;
+    color: white;
+    padding: 2%;
+    font-size: 18pt;
+    //font-family: 'Montserrat', sans-serif, ;
+
+    &:hover{
+        background-color: $color2;
+    }
     
 }
 .margen{
     
     font-size: 14pt;
+    padding: 15%;
+    
 }
 .alineacion{
     font-size: 14pt;
-    text-align: center; /* For Edge */
-    
+    text-align: justify;
 }
+//footer
+.containerBackgorund{
+    background-color: black;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+}
+.logoFooter{
+    width: 50%;
+    height: auto;
+    margin-top: 15%;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  .contactos{
+    padding: 5%;
+  }
+  .contactoResponsivo{
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  .textoContactos{
+    color: white;
+    text-decoration: none;
+    margin-left: 3%;
+    font-size: 18pt;
+    a:hover {
+        text-decoration-color: #A66851;
+      }
 
+      a:active {
+        color: hotpink;
+      } 
+  }
