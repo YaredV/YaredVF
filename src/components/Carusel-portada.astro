@@ -4,9 +4,19 @@ export interface Props{
 	
 	fuente: string;
 	imgDescrip: string;
+	
 }
 import "../estilos/estilos_principales.scss";
 const { fuente, imgDescrip, titulo, cuerpo } = Astro.props;
 ---
 
 <img src={fuente} class="d-block w-100" alt={imgDescrip}>
+
+
+
+<div class="carousel-caption d-none d-md-block sub1">
+	<h1 class="titulo1">YARED VF</h1>
+	<p class="subTitulo">FOTOGRAFIA</p>
+	<img class="barra1" src="/elementos/barra1.png" alt="Logo">
+</div>
+

@@ -10,6 +10,17 @@ $color5: #A63B32;
 
 $color6: #82FF64;
 
+$fuente:'Montserrat', sans-serif;
+$t: 100;
+$e: 200;
+$l: 300;
+$r: 400;
+$m: 500;
+$semiB: 600;
+$b: 700;
+$extraB: 800;
+$N: 900;
+
 
 //$modal-backdrop-bg:                 $black;
 $modal-backdrop-opacity:  0.8;
@@ -17,80 +28,145 @@ $modal-backdrop-opacity:  0.8;
 
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Parisienne&family=Roboto+Condensed&family=Water+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Parisienne&family=Roboto+Condensed&family=Water+Brush&display=swap');
 //npm run uild
 //npm run servidor(nombre)
 
-.nav-link{
-    color: white;
-    
+
+//BARRA NAVEGADOR
+.textNav{
+  font-size: 14pt;
+  font-family: $fuente;
+  font-weight: 200;
+  color:white;
 }
-.estiloslogo{
-    margin-left: 5%;
+.menuProyecto{
+  background-color: #292828;
+  color: $color4;
+  margin: 0;
+  border: none;
+  position: relative;
 }
 
-.dropdown-item{
-    color: white;
-}
 /*&:hover{
     animation-name: example;
 }*/
-
-
-.pestañas{
-    margin: 150px;
-
+body{
+  overflow-x: 0;
 }
+
 .centered1{
     color: white;
     position: absolute;
-    top: 40%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    font-family: 'Montserrat', sans-serif;
-    font-size:90.4781pt;
+    font-family: $fuente;
 }
 .sub1{
-    font-family: 'Montserrat', sans-serif;
-    font-size:36pt;
-    color: #D3CECC;
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
+    font-family: $fuente;
+    color: white;
+    position: absolute;    
+}
+.titulo1{
+  font-size: 90pt;
+  font-weight: $N;
+}
+.subTitulo{
+  color: #D3CECC;
+  font-size: 36pt;
+  font-weight: $N;
 }
 .barra{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.container-fluid{
-    margin: 0;
-    padding: 0;
+    
     
 }
+
+
+
+
+//SECCION SOBRE MI
+
 .IMGT1{
     width: 100%;
-    height: auto;
+    //height: auto;
 }
-.section3{
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-size:30pt;
-
-    padding: 20rem;
+.Seccion2{
+  text-align: center;
+  margin-bottom: 15%;
+  font-family: $fuente;
+  font-weight: $b;
+}
+.margen{
     
-    background-color: white;
+  font-size: 14pt;
+  padding: 15%;
+  
+}
+.alineacion{
+  font-size: 14pt;
+  font-weight: $e;
+  font-family: $fuente;
+  text-align: justify;
+}
+.negritas{
+  font-weight:$m;
 }
 
-body{
-    overflow-x: 0;
+
+.botonCV{
+  margin-top: 10%;
+  background-color: $color1;
+  color: white;
+  padding: 2%;
+  font-size: 18pt;
+  font-family: $fuente;
+  font-weight: $m;
+
+  .botonCV:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
 }
 
+//CARDS HABILIDADES
+.centro{
+  text-align: center;
+  font-family: $fuente;
+  
+}
+.estilosHabilidades{
+  color: white;
+  font-family: $fuente;
+  font-size: 14pt;
+  font-weight: $m;
+}
+.Cartas{
+  padding: 10%;
+}
+.espacio{
+  margin-bottom: 2%;
+}
+.software{
+  width: 25%;
+  margin: 10%;
+}
+.botones{
+  background: $color4;
+  border: none;
+}
+
+//PORTAFOLIO
+.Section3{
+  text-align: center;
+  font-family: $fuente;
+  font-size:30pt;
+  font-weight: $b;
+  margin-top: 5%; 
+}
 .galeria1{
-    margin-top: 5rem;
-
+  margin-top: 3%;
+  padding-left: 10%;
+  padding-bottom: 7%;
+  padding-right: 10%;
 }
 
 .m{
@@ -103,15 +179,11 @@ margin: 0;
 
 .containerGaleria{
    
-    background-color: rgb(0, 0, 0);
-    margin-top: 2%;
-    margin-left: 18%;
-    margin-right: 18%;
-    height: 72%;
+  background-color: rgb(0, 0, 0);
+  //height: 72%;
 }
 
 .containerGaleria1{
-    //background-color: rgb(0, 0, 0);
     background: $modal-backdrop-opacity;
     margin-top: 2%;
     margin-left: 18%;
@@ -126,35 +198,184 @@ margin: 0;
     
 }
 
-.Seccion2{
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 15%;
-    
-}
-.botonCV{
-    margin-top: 10%;
-    background-color: $color1;
-    color: white;
-    padding: 2%;
-    font-size: 18pt;
-    //font-family: 'Montserrat', sans-serif, ;
 
-    &:hover{
-        background-color: $color2;
-    }
-    
-}
-.margen{
-    
-    font-size: 14pt;
-    padding: 15%;
-    
-}
-.alineacion{
+//PROYECTO
+
+
+.textoProyecto{
+    font-family: $fuente;
+    font-weight: 300;
     font-size: 14pt;
     text-align: justify;
+    margin-bottom: 7%;
+  }
+  .tituloProyecto{
+    font-style: $fuente;
+    font-weight: $b;
+    font-size: 30pt;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+
+  .estilosProyecto{
+    padding: 10% ;
+   
+  }
+  .textoalingProyect{
+    padding-left: 7%;
+    padding-right: 7%;
+    text-align: center;
+
+  }
+  .smeraldoaling{
+    text-align: center;
+  }
+  .imageCenter{
+    padding: 20%;
+  }
+  .backgroundMoodboard{
+    background-color: black;
+  }
+  .textMoodboard{
+    color: white;
+    font-family: $fuente;
+    font-size: 14pt;
+    font-weight: $t;
+    text-align:justify;
+  }
+  .tituloMoodboard{
+    color: white;
+    font-family: $fuente;
+    font-size: 30pt;
+    font-weight: $b;
+    
+  }
+  .estilosMoodboard{
+    padding: 10%;
+  }
+  .paletaPropiedades{
+    padding: 20%;
+    text-align: center;
+  }
+
+  .container {
+    position: relative;
+  
+  }
+  .backgorundProces{
+    background-color: black;
+    padding: 2%;
+  }
+  .textProces{
+    font-family: $fuente;
+    font-size: 14pt;
+    font-weight: $t;
+    text-align: justify;
+    color: white;
+  }
+  .titleProces{
+    font-family: $fuente;
+    font-size: 20pt;
+    font-weight: $m;
+    text-align: center;
+    color: white;
+    
+  }
+  .titleProces1{
+    font-family: $fuente;
+    font-size: 25pt;
+    font-weight: $b;
+    text-align: center;
+    color: white;
+    margin-top: 5%;
+  }
+  .imgSmarphone{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    
+  }
+  
+  .contenedorSmarphone{
+    padding: 5%;
+  }
+  
+  .center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40%;
+    width: 30%;
+  }
+  .estilosColumna{
+    padding: 5%;
+  }
+.tituloDescarga{
+    font-family: $fuente;
+    font-size: 25pt;
+    font-weight: $b;
+    text-align: center;
+    margin-top: 15%;
+    color: $color2;
 }
+.propiedadesBotonD{
+    background-color: $color5;
+    border: none;
+    color: white;
+    font-size: 18pt;
+    font-family: $fuente;
+    font-weight: $semiB;
+    text-align: center;
+    padding: 2%;
+
+    &:hover{
+        background-color: $color1;
+    }
+
+}
+.centerDescargaBoton {
+  text-align: center;
+  }
+
+
+
+  //CONTACTO
+.fuenteContactos{
+    font-family: $fuente;
+    font-size: 15pt;
+    font-weight: $b;
+    color: $color4;
+}
+.botonEnviar{
+    background-color: $color1;
+    width: 18%;
+    padding: 2%;
+    border: none;
+
+    font-style: $fuente;
+    font-size: 14pt;
+    font-weight: m;
+    color: white;
+}
+.escribanos{
+  font-family: $fuente;
+  font-size: 36pt;
+  font-weight: $b;
+}
+.flower{
+  text-align: center;
+ width: 75%;
+ height: auto;
+}
+.correo{
+  padding: 5%;
+}
+
+
+
+
+
 //footer
 .containerBackgorund{
     background-color: black;
@@ -197,4 +418,34 @@ margin: 0;
     color: white;
     text-align: center;
     font-size: 10pt;
+  }
+
+  @media only screen and (max-width: 450px) {
+    .responsivoCel {
+      width: 100%;
+      text-align: center;
+    }
+
+    .textNav{
+      font-size: 10px;
+    }
+    .responsivePerfil{
+      margin-top: 5%;
+    }
+    .carousel-indicators{
+      display: none;
+    }
+    .barra1{
+      display: none;
+    }
+    }
+   
+  @media only screen and (max-width: 1440px){
+    .titulo1{
+      font-size: 24pt;
+    }
+    .subTitulo{
+      font-size: 12pt;
+    }
+    
   }

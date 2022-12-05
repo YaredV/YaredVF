@@ -1,0 +1,48 @@
+---
+
+export interface Props{
+	
+	fuente1: string;
+	fuente2: string;
+	imgDescrip1: string;
+	imgDescrip2: string;
+	titulo1: string;
+	titulo2: string;
+	boton1: string;
+	
+}
+import "../estilos/estilos_principales.scss";
+const { fuente1, fuente2, imgDescrip1, imgDescrip2, titulo1, titulo2, boton1} = Astro.props;
+
+---
+
+
+<!--<img src="/E_sobreMi/software.png" class="card-img-top" alt="...">-->
+<img src={fuente1} class="card-img-top" alt={imgDescrip1}>
+<div class="card-body centro">
+	<h5 class="card-title">{titulo1}</h5>
+	<p class="card-text"></p>
+	
+	<a href="#" class="btn btn-dark botones " type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+		{boton1}
+	</a>
+	<!-- Modal -->
+	<div class="modal fade " id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+			<div class="modal-content bg-dark">
+				<div class="modal-header ">
+					<h1 class="modal-title fs-5 estilosHabilidades" id="staticBackdropLabel1">{titulo2}</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body1">
+												
+					<!--<img class="software" src="/E_sobreMi/softwares.png" alt="">-->
+					<img class="software" src={fuente2} alt={imgDescrip2}>
+	
+				</div>
+											
+			</div>
+		</div>
+	</div>
+	
+</div>

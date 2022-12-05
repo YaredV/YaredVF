@@ -8,11 +8,11 @@ import "../estilos/estilos_principales.scss";
 	<main>
 		
 		<!-- SECCIÓN DE FORMULARIO DE CONTACTO  -->
-		<section class="container py-5">
+		<section class="container-fluid py-5">
 			<div class="row">
-				<div class="col-lg-6">
-					
-					<form action="/data" id="Formulario" method="get">
+				<div class="col-md-6 correo">
+					<p class="escribanos">ESCRIBANOS</p>
+					<form action="/data" id="Formulario" method="get" class="fuenteContactos">
 						<div class="my-3">
 							<label for="Nombre">Nombre:</label>
 							<input
@@ -56,10 +56,13 @@ import "../estilos/estilos_principales.scss";
 								required></textarea>
 						</div>
 
-						<button type="submit" class="boton boton1" name="enviar">
+						<button type="submit" class="btn btn-outline-dark botonEnviar" name="enviar">
 							Enviar
 						</button>
 					</form>
+				</div>
+				<div class="col-md-6">
+					<img class="flower" src="/elementos/RM.jpg" alt="">
 				</div>
 			</div>
 		</section>

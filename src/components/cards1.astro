@@ -1,0 +1,89 @@
+---
+
+export interface Props{
+	
+	imagen1: string 
+	alt1: string; 
+	tituloA: string; 
+	botonA: string;
+	tituloB: string;
+	grafica1: string;
+	alt2: string;
+	cuerpo1: string;
+	grafica2: string;
+	alt3: string;
+	cuerpo2: string;
+	grafica3: string;
+	alt4: string;
+	cuerpo3: string;
+	grafica4: string;
+	alt5: string;
+	cuerpo4: string;
+	
+	
+}
+import "../estilos/estilos_principales.scss";
+const { imagen1, alt1, tituloA, botonA, tituloB, grafica1, alt2, cuerpo1, grafica2, alt3, cuerpo2, grafica3, alt4, cuerpo3, grafica4, alt5, cuerpo4} = Astro.props;
+---
+
+	<!--<img src="/E_sobreMi/habilidad.png" class="card-img-top" alt="...">-->
+	<img src={imagen1} class="card-img-top" alt={alt1}>
+	<div class="card-body centro">
+		<h5 class="card-title">{tituloA}</h5>
+		<p class="card-text"></p>
+	
+		<a href="#" class="btn  btn-dark botones " type="button"data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+			{botonA}
+		</a>
+		<!-- Modal -->
+		<div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+				<div class="modal-content bg-dark">
+					<div class="modal-header ">
+						<h1 class="modal-title fs-5 estilosHabilidades" id="staticBackdropLabel">{tituloB}</h1>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="row p-5">
+							<div class="col-md-6">
+								<!--<img  src="/E_sobreMi/90.png" alt="">-->
+								<img  src={grafica1} alt={alt2}>
+							</div>
+							<div class="col-md-6">
+								<!--<p class="estilosHabilidades">Fotografia</p>-->
+								<p class="estilosHabilidades">{cuerpo1}</p>
+							</div>
+							<div class="col-md-6">
+								<!--<img src="/E_sobreMi/50.png" alt="">-->
+								<img src={grafica2} alt={alt3}>
+							</div>
+							<div class="col-md-6">
+								<!--<p class="estilosHabilidades">Edicion</p>-->
+								<p class="estilosHabilidades">{cuerpo2}</p>
+							</div>
+							<div class="col-md-6">
+								<!--<img src="/E_sobreMi/50.png" alt="">-->
+								<img src={grafica3} alt={alt4}>
+							</div>
+							<div class="col-md-6">
+								<!--<p class="estilosHabilidades">Montaje</p>-->
+								<p class="estilosHabilidades">{cuerpo3}</p>
+							</div>
+							<div class="col-md-6">
+								<!--<img src="/E_sobreMi/50.png" alt="">-->
+								<img src={grafica4} alt={alt5}>
+							</div>
+							<div class="col-md-6">
+								<!--<p class="estilosHabilidades">Ilustracion</p>-->
+								<p class="estilosHabilidades">{cuerpo4}n</p>
+							</div>
+	
+						</div>
+	
+					</div>
+									
+				</div>
+			</div>
+		</div>
+	
+	 </div>
